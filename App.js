@@ -1,25 +1,14 @@
-// ColorChangerApp.js
-import React, { useState } from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import CounterApp from './CounterAppApp';
+import React from 'react';
+import {View} from 'react-native';
+import CounterApp from './CounterApp';
 
-export default function ColorChangerApp() {
-  const [bgColor, setBgColor] = useState('white');
-
+const App = () => {
   return (
-    <View style={[styles.container, { backgroundColor: bgColor }]}>
-      <Button title="White" onPress={() => setBgColor('white')} />
-      <View style={{ marginVertical: 10 }} />
-      <Button title="Light Blue" onPress={() => setBgColor('lightblue')} />
-      <View style={{ marginVertical: 10 }} />
-      <Button title="Light Green" onPress={() => setBgColor('lightgreen')} />
+    <View style = {{flex: 1}}>
+      <midtermAct1App />
     </View>
-  );
-}
+    );
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+export default App;
