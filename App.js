@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// ColorChangerApp.js
+import React, { useState } from 'react';
+import { View, Button, StyleSheet } from 'react-native';
 
-export default function App() {
+export default function ColorChangerApp() {
+  const [bgColor, setBgColor] = useState('white');
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={[styles.container, { backgroundColor: bgColor }]}>
+      <Button title="White" onPress={() => setBgColor('white')} />
+      <View style={{ marginVertical: 10 }} />
+      <Button title="Light Blue" onPress={() => setBgColor('lightblue')} />
+      <View style={{ marginVertical: 10 }} />
+      <Button title="Light Green" onPress={() => setBgColor('lightgreen')} />
     </View>
   );
 }
@@ -13,8 +19,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
 });
