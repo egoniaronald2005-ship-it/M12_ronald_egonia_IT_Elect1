@@ -1,7 +1,7 @@
-import CounterApp from './CounterAppApp';
+import ChatBoxApp from './ChatBoxApp';
 import React from 'react';
 import {View} from 'react-native';
-import CounterApp from './CounterApp';
+import ChatBoxApp from './ChatBoxApp';
 
 const App = () => {
   return (
