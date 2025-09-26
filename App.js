@@ -6,7 +6,7 @@ import ChatBoxApp from './ChatBoxApp';
 const App = () => {
   return (
     <View style = {{flex: 1}}>
-      <midtermAct1App />
+      <ChatBoxApp/>
     </View>
     );
 };
