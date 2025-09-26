@@ -6,7 +6,7 @@ import CounterApp from './CounterApp';
 const App = () => {
   return (
     <View style = {{flex: 1}}>
-      <Activity5/>
+      <CounterApp/>
     </View>
     );
 };
