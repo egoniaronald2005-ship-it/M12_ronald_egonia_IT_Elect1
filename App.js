@@ -1,14 +1,23 @@
-import CounterApp from './CounterApp';
-import React from 'react';
-import {View} from 'react-native';
+
 import CounterApp from './CounterApp';
 
-const App = () => {
+
+import {SafeAreaView,StyleSheet} from 'react-native';
+import ColorChangerApp from './ColorChangerApp.js';
+import CounterApp from "./CounterApp.js";
+export default function App() {
+
   return (
-    <View style = {{flex: 1}}>
-      <Activity5/>
-    </View>
-    );
-};
+    
+ <SafeAreaView style={styles.container}>
+<CounterApp/>
+ <ColorChangerApp />
+ </SafeAreaView>
+   )
+}
 
-export default App;
+const styles = StyleSheet.create({
+  container:{
+    flex:1
+  }
+});
