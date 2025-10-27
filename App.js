@@ -1,14 +1,18 @@
-import CounterApp from './CounterApp';
-import React from 'react';
-import {View} from 'react-native';
-import CounterApp from './CounterApp';
+import React from "react";
+import { KeyboardAvoidingView, Platform, ScrollView } from "react-native";
+import SemiAct1App from "./SemiAct1App"; // ✅ only one correct import
+import CommentSection from "./CommentSection"; // ✅ import your comment section
 
-const App = () => {
+export default function App() {
   return (
-    <View style = {{flex: 1}}>
-      <CounterApp/>
-    </View>
-    );
-};
-
-export default App;
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        <SemiAct1App />           {/* ✅ correct self-closing tag */}
+        <CommentSection />
+      </ScrollView>
+    </KeyboardAvoidingView>
+  );
+             }
