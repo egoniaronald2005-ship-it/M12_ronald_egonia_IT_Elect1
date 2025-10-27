@@ -1,7 +1,7 @@
 import React from "react";
 import { KeyboardAvoidingView, Platform, ScrollView } from "react-native";
-import SemiAct1App from "./SemiAct1App"; // ✅ only one correct import
-import CommentSection from "./CommentSection"; // ✅ import your comment section
+import ChatBoxApp from "./ChatBoxApp"; // ✅ Correct import
+import CommentSection from "./CommentSection"; // ✅ Import comment section
 
 export default function App() {
   return (
@@ -10,9 +10,9 @@ export default function App() {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <SemiAct1App />           {/* ✅ correct self-closing tag */}
+        <ChatBoxApp />           {/* ✅ Use ChatBoxApp here */}
         <CommentSection />
       </ScrollView>
     </KeyboardAvoidingView>
   );
-             }
+}
